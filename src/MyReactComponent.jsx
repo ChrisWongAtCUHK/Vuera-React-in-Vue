@@ -1,7 +1,7 @@
 import React from "react";
 
-export default () => (
+export default props => (
   <div>
-    <h1>I'm a react component.</h1>
+    <h2 onClick={props.reset}>{props.message}</h2>
   </div>
 );

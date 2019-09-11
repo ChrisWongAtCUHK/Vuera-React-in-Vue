@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>{{ msg }}</h1>
-    <my-react-component />
+    <h1>Hello. I am Vue component.</h1>
+    <my-react-component :message="message" @reset="reset" />
   </div>
 </template>
 
@@ -13,8 +13,13 @@ export default {
   components: { MyReactComponent },
   data() {
     return {
-      msg: "Hello. I am Vue component."
+      message: "Message from Vue to React."
     };
+  },
+  methods: {
+    reset() {
+      this.message = "";
+    }
   }
 };
 </script>
