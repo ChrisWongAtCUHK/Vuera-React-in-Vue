@@ -9,8 +9,16 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: "vue-loader"
+      },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ["babel-loader"]
       }
     ]
+  },
+  resolve: {
+    extensions: ["*", ".js", ".jsx"]
   },
   plugins: [
     new HtmlWebpackPlugin({
