@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{ msg }}</h1>
-    <MyReactComponent />
+    <my-react-component />
   </div>
 </template>
 
